@@ -1,0 +1,36 @@
+{
+  "checkList": [
+    {
+      "checkName": "checkName",
+      "success": true,
+      "parameter": [
+        {
+          "className": "className",
+          "name": "name",
+          "value": "value"
+        },
+        {
+          "className": "className",
+          "name": "name",
+          "value": "value"
+        },
+        {
+          "className": "className",
+          "name": "name",
+          "value": "value"
+        },
+        {
+          "className": "className",
+          "name": "name",
+          "value": "value"
+        },
+        {
+          "className": "className",
+          "name": "name",
+          "value": "value"
+        }
+      ],
+      "parameterID": "string"
+    }
+  ]
+}

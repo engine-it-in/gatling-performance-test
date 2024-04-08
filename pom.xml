@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.example</groupId>
+    <artifactId>performance-tests</artifactId>
+    <version>0.0.1</version>
+
+    <properties>
+        <!--main-->
+        <java.version>17</java.version>
+        <!--utils-->
+        <org.projectlombok.lombok.version>1.18.28</org.projectlombok.lombok.version>
+        <org.slf4j.slf4j.version>2.0.9</org.slf4j.slf4j.version>
+        <com.fasterxml.jackson.core.jackson-databind.version>2.16.1
+        </com.fasterxml.jackson.core.jackson-databind.version>
+        <!--gatling-->
+        <io.gatling.gatling-app.version>3.10.4</io.gatling.gatling-app.version>
+        <io.gatling.highcharts.gatling-charts-highcharts.version>3.10.4
+        </io.gatling.highcharts.gatling-charts-highcharts.version>
+        <io.gatling.gatling-maven-plugin.version>4.8.2</io.gatling.gatling-maven-plugin.version>
+        <!--maven-->
+        <org.apache.maven.plugins.maven-compiler-plugin.version>3.12.1
+        </org.apache.maven.plugins.maven-compiler-plugin.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.projectlombok.lombok.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j.slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${com.fasterxml.jackson.core.jackson-databind.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.gatling</groupId>
+            <artifactId>gatling-app</artifactId>
+            <version>${io.gatling.gatling-app.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.gatling.highcharts</groupId>
+            <artifactId>gatling-charts-highcharts</artifactId>
+            <version>${io.gatling.highcharts.gatling-charts-highcharts.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${org.apache.maven.plugins.maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.gatling</groupId>
+                <artifactId>gatling-maven-plugin</artifactId>
+                <version>${io.gatling.gatling-maven-plugin.version}</version>
+                <configuration>
+                    <simulationClass>simulation.ServiceSimulation</simulationClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
