@@ -1,7 +1,7 @@
 # gatling-performance-tests
 
 ## Что это?
-* [Описание](Ссылка на хабр);
+* [Описание](https://habr.com/ru/companies/alfastrah/articles/808281/);
 
 ## Для чего это?
 * Шаблонный проект для запуска нагрузочных тестов;
